@@ -10,4 +10,3 @@ class Channel:
     def print_info(self) -> None:
         """Выводит в консоль информацию о канале."""
         pass
-
