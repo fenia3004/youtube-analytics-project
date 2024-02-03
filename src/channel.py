@@ -28,38 +28,16 @@ class Channel:
     def get_service(cls):
         return cls.youtube
 
-    # @property
-    # def channel_id(self) -> str:
-    #     return self.channel_id
+    @property
+    def channel_id(self) -> str:
+        return self.__channel_id
+
 
     def print_info(self) -> None:
         """Выводит в консоль информацию о канале."""
 
         channel = self.youtube.channels().list(id=self.__channel_id, part='snippet,statistics').execute()
         return channel
-
-    # def description(self) -> None:
-    #     """Выводит в консоль информацию о канале."""
-    #
-    #     channel = self.youtube.channels().list(id=self.channel_id, part='snippet,statistics').execute()
-    #     return channel
-    #
-    # def url(self) -> None:
-    #     """Выводит в консоль информацию о канале."""
-    #
-    #     channel = self.youtube.channels().list(id=self.channel_id, part='snippet,statistics').execute()
-    #     return channel
-    #
-    # def subscriber_count(self):
-    #     channel = self.youtube.channels().list(id=self.channel_id, part='snippet,statistics').execute()
-    #     return channel
-    #
-    # def video_count(self):
-    #     channel = self.youtube.channels().list(id=self.channel_id, part='snippet,statistics').execute()
-    #     return channel
-    #
-    # def file_channal(self):
-    #     moscowpython = {}
 
     def __dict_to_json(self):
         """Функция заполняющая словарь
