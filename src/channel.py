@@ -84,3 +84,4 @@ class Channel:
 
         with open(name_file, 'w', encoding='utf-8') as f:
             json.dump([self.__dict_to_json()], f, ensure_ascii=False, indent=2)
+
